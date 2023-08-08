@@ -5,17 +5,18 @@ import path from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 // https://vitejs.dev/config/
 // mock需要用到插件
-import {viteMockServe} from 'vite-plugin-mock'
-export default defineConfig(({command}) => {
+import { viteMockServe } from 'vite-plugin-mock'
+export default defineConfig(({ command }) => {
   return {
-    plugins: [vue(),
-    createSvgIconsPlugin({
-      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
-      symbolId: 'icon-[dir]-[name]',
-    }),
-    viteMockServe({
-      localEnabled:command === 'serve',// 保证开发阶段可以使用mock接口
-    })
+    plugins: [
+      vue(),
+      createSvgIconsPlugin({
+        iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+        symbolId: 'icon-[dir]-[name]',
+      }),
+      viteMockServe({
+        localEnabled: command === 'serve', // 保证开发阶段可以使用mock接口
+      }),
     ],
     resolve: {
       alias: {

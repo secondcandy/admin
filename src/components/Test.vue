@@ -1,13 +1,9 @@
 <template>
- <div class="nice">
+  <div class="nice">
     <h2>这里是测试页面</h2>
- </div>
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
