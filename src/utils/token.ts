@@ -7,3 +7,7 @@ export const SET_TOKEN = (token: string) => {
 export const GET_TOKEN = () => {
   return localStorage.getItem('TOKEN')
 }
+// 本地移除数据
+export const REMOVE_TOKEN = () => {
+  return localStorage.removeItem('TOKEN')
+}

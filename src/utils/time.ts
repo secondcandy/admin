@@ -3,11 +3,11 @@ let helloTime = '你好'
 function getTime() {
   // 通过内置的构造函数Date
   let hours = new Date().getHours()
-  if (hours <= 9 && hours > 5) {
+  if (hours >= 5 && hours < 9) {
     helloTime = '早上'
-  } else if (hours > 9 && hours < 14) {
+  } else if (hours >= 9 && hours < 14) {
     helloTime = '上午'
-  } else if (hours > 14 && hours < 18) {
+  } else if (hours >= 14 && hours < 18) {
     helloTime = '下午'
   } else {
     helloTime = '晚上'
